@@ -1,0 +1,167 @@
+/*All the css is in order*/
+
+*{
+	font-family:Quintessential;
+	
+}
+/*transform:rotateX(0deg) rotateY(30deg) rotateZ(30deg);*/
+.homepage_body{
+	background-image:url('https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmlnaHQlMjBza3l8ZW58MHx8MHx8&w=1000&q=80');
+	background-size:cover;background-repeat:no-repeat;background-attachment:scroll;
+}
+/*box-shadow:10px 10px 5px red;*/
+.home{color:red;background-color:lightblue;text-align:center;min-width:1500px;
+	}
+.home a:hover{background-color:green;color:rgb(18,222,39);text-decoration:overline underline;}
+.home a{margin-right:10%;}
+.home_first_a{margin-left:10%;}
+#home{color:red;background-color:lightblue;text-align:center;min-width:1500px;
+	background-position:bottom;position:fixed;margin-top:-27.863px;margin-left:-10px;
+	padding-right:21px;box-shadow:5px 5px 100px red;text-decoration:none;z-index:1;
+	}
+#home a:hover{background-color:green;color:rgb(18,222,39);text-decoration:overline underline;}
+#home a{margin-right:10%;text-decoration:none;}
+#home_first_a{margin-left:10%;}
+
+.homepage_first_h1{font-size:260%;color:red;padding-top:30px;}
+.Subheading{
+	font-size:1.5em;color:#ebd234;
+}
+
+#homepage_ordered_list{color:red;font-family:cursive;}
+
+.homepage_table th:hover{color:blue;}
+.homepage_table td:hover{color:blue;background-color:rgba(10,255,10,0.5);}
+.homepage_table table,.homepage_table td{border-collapse:collapse;}
+/*Yes, you can use grouping selector like this, just don't question it.*/
+.homepage_table td{border-style:solid;border-width:1px;border-color:red;}
+.homepage_table table{background-color:cyan;border:5px solid rgb(13, 120, 35);text-align:center;margin-top:100px;}
+#homepage_tr_1{text-align:center;font-size:1.3em}
+.homepage_table_other_tr{font-size:1.3em;}
+/*#homepage_table_tr_special{width:33%;}*/
+
+.forms,h2{color:rgb(235, 171, 157);}
+
+.iframe_homepage iframe{width:33%;height:300px;}
+
+/*This is for the back in 1,2,3,4,5 html*/
+.back {color:red;}
+
+.hr_changes hr{background-color:rgba(52, 150, 186, 1);height:20px;border-radius:10px;width:50%;}
+.special_hr{margin:0px 20% 0px 0px;}
+.special_hr_2{margin:10px 0px 0px 50%;}
+.special_hr_3{margin:10px 20% 0px 0px;}
+/*.table_hr{border:50px solid black;border-radius:10px 10px 0px 0px;transform:rotate(90deg)}*/
+/*.fancy_line{position: absolute;
+			left:50%;
+            transform: translate(-50%, -50%);
+            height: 10px;
+            width: 20px;
+            border-radius: 15px 15px 0 0;
+            background-color: green;
+            transform:rotate(90deg);
+        }*/
+.special_hr_4{background-color:rgba(52, 150, 186, 1);height:22px;width:5.5%;margin:30px 0px 0px 46.75%;
+	transform:rotate(90deg);position:absolute;border-radius:390px 390px 150px 150px;}
+
+
+
+/*This is for 1.html which is the overworld introduction*/
+
+
+
+
+.hs{text-align:center;font-family:'Dancing Script', cursive;color:blue;font-size:400%;text-shadow:0px 0px 50px red;}
+.feedback2{background-position:bottom right;}
+#body_1{background-color:rgba(240, 236, 194,1);}
+
+/*This is for 2.html */
+.ol{
+	text-align:center;
+	color:red;
+}
+
+#op0{
+	opacity:0;
+}
+
+
+#body_2{
+			background-color:rgb(170, 197, 230);
+			opacity:0.9;
+			background-image:url("https://images.gnwcdn.com/2020/articles/2020-07-19-11-39/minecraft-fans-find-seed-for-title-screen-background-panorama-1595155174941.jpg/EG11/resize/1200x-1/minecraft-fans-find-seed-for-title-screen-background-panorama-1595155174941.jpg");
+			background-position:bottom right;
+			background-repeat:repeat-y;
+			background-attachment:fixed;
+			background-size:cover;
+
+}
+/*.geminitay{
+	margin-bottom:20px;
+}*/
+#mark_1{
+		margin-left:50%;
+		padding:20px 50px;
+		font-weight:normal;
+}
+#zombified_piglin{color:blue;font-size:400%;text-align:center;}
+#p22{
+	color:red;text-align:center;font-size:1.5em;background-color:cyan;border:2px dotted red;
+	box-sizing:border-box;
+	width:100%;
+	height:45px;
+}
+
+
+
+/*This is for 3.html */
+.float{
+		float:left;
+		width:33%;
+		border-right:2px solid rgba(10,255,10,1);					
+}
+
+/*.float_2{
+	float:left;
+	width:50%;
+}*/
+#minecraft_nether_pic{
+		margin-right:-30px;
+}
+#body_3{text-align:center;background-color:rgba(240, 236, 194,1);}
+h3{
+	font-family:'Dancing Script', cursive;color:rgba(10,255,10,1);font-size:200%;
+}
+#distinct{
+	border-right:1px solid rgba(10,255,10,1);
+	color:rgb(176, 176, 0);
+
+}
+#distinct1{
+	color:#74c0d4;
+}
+#distinct p,#distinct1 p{
+	font-family:'Dancing Script', cursive;
+}
+#special_case_hr_4{
+	clear:left;
+	background-color:rgba(52, 150, 186, 1);height:22px;width:5.5%;margin:-56px 0px 0px 46.75%;
+	transform:rotate(90deg);position:absolute;border-radius:390px 390px 150px 150px;margin0
+}
+.body_3_subheading{
+	color:red;font-size:101%;margin-top:-100px;
+}
+.blackstone{
+
+}
+
+/*for 4.html*/
+.display_1{
+	display:block;
+
+}
+
+
+
+
+
