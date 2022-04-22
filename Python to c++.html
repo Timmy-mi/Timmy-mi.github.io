@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<link rel="stylesheet" href="ctop.css">
+		<link rel="stylesheet" href="test.css">
+	<style>
+		h1{
+			text-align:center;
+			font-size:2em;
+			color:rgba(10,255,10,1);
+		}
+		*{
+			font-size:105%;
+
+		}
+		#onetwo{
+			color:red;
+
+			background-color:rgb(170, 197, 230)
+		}
+
+		code{
+			background-color: #eee;
+  			border: 1px solid #999;
+  			display:inline-block;
+  			padding: 20px;
+  			display:block;}
+		.code {
+  			float:left;
+
+			}
+		.codeone{
+			padding:20px;
+			margin-top:-49px;
+			float:right;
+			height:625.6px;
+			width:50%;
+		}
+		.abcdefg{
+			padding:20px;
+			width:48.5%;
+			float:right;
+			height:496.4px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="topnav">
+	<a href="index.html">Introduction</a>
+	<a href="Python to c++.html">P to C</a>
+	<a href="Javascript to c++.html">Javascript to C++</a>
+	<a href="Testpagefirst.html">Play</a>
+	<a href="feedback.html">Feedback</a> 
+	<a href="contact.html">Contact Us</a>
+	</div>
+<br>
+<h1>Python to C++</h1>
+<pre>
+	<code class="code" id="codezero">
+C++ code
+void level3 ()
+{
+  int rntotal, rn1, rn2, ln; //rn=random number,ln=last number                     .
+  int op1, op2, op3;  //option1~3
+  cout << "you choose 3 in these options"<< endl;
+  rntotal = rnd (1000, 1);
+  rn1 = rnd (400, 1);
+  rn2 = rnd (300, 1);
+  ln = rntotal - rn1 - rn2;
+  op1 = rnd (200, 1);
+  op2 = rnd (500, 1);
+  op3 = rnd (400, 1);
+  int option[6];
+  option[0] = rn1;
+  option[1] = rn2;
+  option[2] = ln;
+  option[3] = op1;
+  option[4] = op2;
+  option[5] = op3;
+  /*for (int i=0;i<6;i++){
+ cout<< option[i] <<" ";
+    }*/
+    cout<<"the total number is     "<< rntotal<< endl;
+    cout<< rn1<< endl;
+    cout<< rn2<< endl;
+    cout<< ln<< endl;
+
+
+
+
+
+	</code>
+</pre>
+<pre>
+	<code class="codeone" id="codeone" >
+	C++ code
+	int newArr[6];                                                                        .
+    int n;
+    for (int i=0;i<6;i++)
+    {
+        newArr[i]=-1010;
+    }
+    for (int i=0;i<6;i++)
+    {
+        do
+        {
+            n=rnd(5,0);
+        } while (newArr[n]!=-1010);
+        newArr[n]=option[i];
+    }
+    for (int i=0;i<6;i++){
+        cout<< newArr[i]<<" ";
+    }//已打乱
+    cout<< endl;
+    cout<<"please choose the number of the choice"<< endl;
+    int choice;
+    int sum=0;
+    for(int i=1;i<=3;i++){
+        cout<<"Choice #"<< i<<":";
+        cin>>choice;
+        sum=sum+newArr[choice-1];
+    }//检查
+    if(sum==rntotal){
+        cout<<"you win"<< endl;
+    } else{
+        cout<<"you lost"<< endl;
+    }
+}
+	</code>
+</pre>
+<pre>
+		<code class="code">
+Python Code
+import random
+print('you will get a number and 6 options')
+print('choose 3 in the 6 options in order to get the original number')
+print('-------------------------')
+print("press ENTER to start the game")
+
+rntotal = random.randint(-50,100)
+rn1 = random.randint(1,40)
+rn2 = random.randint(1,30)
+ln = rntotal - rn1 -rn2
+op1 = random.randint(-49,150)
+print()
+op2 = random.randint(-39,460)
+op3 = random.randint(-99,300)
+option = [rn1,rn2,ln,op1,op2,op3]
+currentIndex = len(option)
+while currentIndex != 0:
+randomIndex = random.randint(0,5)
+currentIndex = currentIndex - 1
+[option[currentIndex],option[randomIndex]] = [option[randomIndex],option[currentIndex]]
+sentence1 = "the total number is " + str(rntotal) + "\nPlease enter the order!"
+print(sentence1)
+print(option)
+print(type(option))
+		</code>
+	</pre>
+	<pre>
+		<code class="abcdefg">
+Python Code
+orderone = int(input("Please enter the first order       "))
+print(type(orderone))
+
+ordertwo = int(input("Please enter the second order        "))
+orderthree = int(input("Please enter the third number      "))                           .
+first = int(option[orderone - 1])
+second = int(option[ordertwo - 1])
+third = int(option[orderthree - 1])
+if first+second+third == int(rntotal):
+    print('you win')
+else:
+    print('you lose')
+
+
+		</code>
+	</pre>
+
+
+	<p>overall logic: </p>
+
+	<br>
+<center>
+	<div class="homepage_table">
+		<table>
+			<tr id="homepage_tr_1">
+				<th colspan="2">
+					Basic introduction Hard Part of the code
+				</th>
+				
+			</tr>
+			<tr class="homepage_table_other_tr" id="homepage_table_tr_special" >
+				<td>
+					Hard_Part 1
+				</td>
+				<td>
+					How to make Python and C++ work?
+				</td>
+
+			</tr>
+			<tr class="homepage_table_other_tr">
+				<td id="quirky">
+<p>currentIndex = len(option)</p>
+<p>while currentIndex != 0:</p>
+<p>randomIndex = random.randint(0,5)</p>
+<p>currentIndex = currentIndex - 1</p>
+<p>[option[currentIndex],option[randomIndex]] = [option[randomIndex],option[currentIndex]]</p>
+<p>sentence1 = "the total number is " + str(rntotal) + "\nPlease enter the order!"</p>
+				</td>
+				<td>
+					Use the link down below to access it
+				</td>
+
+			</tr>
+			<tr class="homepage_table_other_tr">
+				<td>
+					<a href="https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array">
+					<img src="https://blog.galvanize.com/wp-content/uploads/2018/11/bigstock-Real-Python-Code-Developing-Sc-217216531-710x530.jpg" width="450px" height="400px">
+				</a>
+				</td>
+				<td>
+					<a href="https://www.programiz.com/python-programming/online-compiler/">
+					<img src="https://miro.medium.com/max/840/1*Acz2aMKGEqOmywuX8lFO8A.jpeg" width="475px" height="400px">
+				</a>
+				</td>
+
+			</tr>
+		</table>
+	</div>
+	<div id="onetwo">
+	<p>One main Function, we can connect the main function to the menu(the introduction of the game) and deffirent levels. And then solve the variables in every small functions.</p>
+	<br>
+	<p>Operational logic：</p>
+
+	<br>
+
+	<p>First step: get a random total number.</p>
+	<br>
+	<p>Second Step: set 2 of the curret answer</p>
+
+	<br>
+	<p>Step3: use the total number minuse the two numbers in step 2 to get the third answer</p>
+
+	<br>
+	<p>Step 4: use random number again to get 3 Interference options </p>
+
+	<br>
+
+	<p>Step5: put the 6 number in an array</p>
+
+	<br>
+
+	<p>Step6: output the options in Array[random number 0~5]</p>
+
+	<br>
+	<p>overall logic: One main Function, we can connect the main function to the menu(the introduction of the game) and deffirent levels. And then solve the variables in every small functions.</p>
+
+	<br>
+
+	<p>Operational logic：</p>
+
+	<br>
+
+	<p>First step: get a random total number.</p>
+	<br>
+	<p>Second Step: set 2 of the curret answer</p>
+
+	<br>
+	<p>Step3: use the total number minuse the two numbers in step 2 to get the third answer</p>
+
+	<br>
+	<p>Step 4: use random number again to get 3 Interference options </p>
+
+	<br>
+
+	<p>Step5: put the 6 number in an array</p>
+
+	<br>
+
+	<p>Step6: output the options in Array[random number 0~5]</p>
+
+	<br>
+	<p>Step7: let the user enter his choise. if he choose 5th, when the value  return to the program, the program will change the number to the array by Array[5-1]</p>
+
+	<br>
+	<p>Step8: get three values of the number which the options that user chose represent and add them together </p>
+
+	<br>
+	<p>Step9: compare the number in step8 and the total number in step1</p>
+
+	<br>
+	<p>Step 10 : use "if else loop "to tell the user result</p>		
+	</center>	
+</div>
+
+</body>
+</html>
