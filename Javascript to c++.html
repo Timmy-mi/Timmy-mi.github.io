@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>translate C++ to JavaScript</title>
+	<link rel="stylesheet" href="ctop.css">
+
+	<style>
+		*{
+			font-size:105%;
+
+		}
+
+		code{
+			background-color: #eee;
+  			border: 1px solid #999;
+/*  			display:inline-block;*/
+  			padding: 20px;
+  			display:block;
+
+		}
+		.code {
+			width:667.5px;			
+  			float:left;
+			}
+		.codeone{
+			padding:20px;
+			margin-top:-31px;
+			float:right;
+			height:625.6px;
+		}
+		#codethree{
+
+			width:667.5px;
+			height:625.6px;
+		}
+		#codefour{
+			margin-top:0px;
+			width:750px;
+		}
+
+
+		/*.yo{display:inline;width:33%;}*/
+	</style>
+</head>
+<body class="bdy">
+	<div class="topnav">
+	<a href="index.html">Introduction</a>
+	<a href="Python to c++.html">P to C</a>
+	<a href="Javascript to c++.html">Javascript to C++</a>
+	<a href="Testpagefirst.html">Play</a>
+	<a href="feedback.html">Feedback</a> 
+	<a href="contact.html">Contact Us</a>
+	</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<h1>translation between the two different computer language</h1>
+	<br>
+<pre>
+<code class='code' id="codezero" onclick="secpic()">
+			Javascript
+function levelthree(){
+ var rntotal = Math.ceil(Math.random()*1000);
+ var rn1 = Math.ceil(Math.random()*400);
+ var rn2 = Math.ceil(Math.random()*300);
+ var ln = rntotal - rn1 -rn2;
+ var op1 = Math.ceil(Math.random()*200)-50;
+ var op2 = Math.ceil(Math.random()*500)-40;
+ var op3 = Math.ceil(Math.random()*400)-100;
+ var option = [rn1,rn2,ln,op1,op2,op3];
+ //generating numbers
+ alert(option)
+
+  var currentIndex = option.length;
+  var randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [option[currentIndex], option[randomIndex]] = [
+      option[randomIndex], option[currentIndex]];
+    //I didn't write this, I copy it from the internet
+      /*this way even though randomIndex might be the same but since currentIndex 
+    will 
+    continue to change, the order 
+    of the array will change*/
+  }
+  </code>
+</pre>
+<pre onclick="">
+<code class="codeone" id="codeone" onclick="secpictwo()">
+				Javascript
+var sentence1 = "the total number is " + rntotal + "\nPlease enter the order!" + "\n" + option;
+var orderone = parseInt(prompt(sentence1));
+var ordertwo = parseInt(prompt(sentence1));
+var orderthree = parseInt(prompt(sentence1));
+if (orderone <= 0 || orderone >= 6){
+	alert('You have 10,000 iq and should 1v1 dream in manhaunt ')
+	return
+}
+else if(orderthree <= 0 || orderthree >= 6){
+	alert('Smart Boy')
+	return
+}
+else if(ordertwo <= 0 || ordertwo >= 6){
+	alert('You are so smart. You shouldn\'t be here')
+	return
+}
+else if(ordertwo === orderone || orderthree === orderone || orderthree === ordertwo){
+	for (var i = 0; i < 100 ; i++){
+	alert('you are disqualified, prepare to press your enter key for 100 times you idiot!')
+}	
+}
+ var first = option[orderone - 1]
+ var second = option[ordertwo - 1]
+ var third = option[orderthree - 1];
+if(first+second+third == rntotal){
+	alert('you win')
+}
+else{
+	alert('you lose')
+}
+}
+</code>
+</pre>
+<pre>
+	<code class="code" id="codethree">
+void level3 ()
+{
+  int rntotal, rn1, rn2, ln; //rn=random number,ln=last number                     .
+  int op1, op2, op3;  //option1~3
+  cout << "you choose 3 in these options"<< endl;
+  rntotal = rnd (1000, 1);
+  rn1 = rnd (400, 1);
+  rn2 = rnd (300, 1);
+  ln = rntotal - rn1 - rn2;
+  op1 = rnd (200, 1);
+  op2 = rnd (500, 1);
+  op3 = rnd (400, 1);
+  int option[6];
+  option[0] = rn1;
+  option[1] = rn2;
+  option[2] = ln;
+  option[3] = op1;
+  option[4] = op2;
+  option[5] = op3;
+  /*for (int i=0;i<6;i++){
+ cout<< option[i] <<" ";
+    }*/
+    cout<<"the total number is     "<< rntotal<< endl;
+    cout<< rn1<< endl;
+    cout<< rn2<< endl;
+    cout<< ln<< endl;
+
+
+
+
+
+	</code>
+</pre>
+
+<pre>
+	<code class="codeone" id="codefour" onclick="secpicfour()">
+	int newArr[6];                                                                        .
+    int n;
+    for (int i=0;i<6;i++)
+    {
+        newArr[i]=-1010;
+    }
+    for (int i=0;i<6;i++)
+    {
+        do
+        {
+            n=rnd(5,0);
+        } while (newArr[n]!=-1010);
+        newArr[n]=option[i];
+    }
+    for (int i=0;i<6;i++){
+        cout<< newArr[i]<<" ";
+    }//已打乱
+    cout<< endl;
+    cout<<"please choose the number of the choice"<< endl;
+    int choice;
+    int sum=0;
+    for(int i=1;i<=3;i++){
+        cout<<"Choice #"<< i<<":";
+        cin>>choice;
+        sum=sum+newArr[choice-1];
+    }//检查
+    if(sum==rntotal){
+        cout<<"you win"<< endl;
+    } else{
+        cout<<"you lost"<< endl;
+    }
+
+}
+	</code>
+</pre>
+	<!--<img id="first" src="16.png" width="400px" height="500px">
+	<img id="second" src="201.jpg" width="600px" height="500px">-->
+
+	<br>
+
+	<p>overall logic: </p>
+<center>
+
+	<br>
+	<p>One main Function, we can connect the main function to the </p>
+	<br>
+<p>menu(the introduction of the game) and deffirent levels. And then solve the variables in every small functions.</p><br>
+
+	<p>Operational logic：</p>
+
+	<br>
+
+	<p>First step: get a random total number.</p>
+	<br>
+	<p>Second Step: set 2 of the curret answer</p>
+
+	<br>
+	<p>Step3: use the total number minuse the two numbers in step 2 to get the third answer</p>
+
+	<br>
+	<p>Step 4: use random number again to get 3 Interference options </p>
+
+	<br>
+
+	<p>Step5: put the 6 number in an array</p>
+
+	<br>
+
+	<p>Step6: output the options in Array[random number 0~5]</p>
+
+	<br>
+	<p>overall logic: One main Function, we can connect the main function to the menu(the introduction of the game) and deffirent levels. And then solve the variables in every small functions.</p>
+
+	<br>
+
+	<p>Operational logic：</p>
+
+	<br>
+
+	<p>First step: get a random total number.</p>
+	<br>
+	<p>Second Step: set 2 of the curret answer</p>
+
+	<br>
+	<p>Step3: use the total number minuse the two numbers in step 2 to get the third answer</p>
+
+	<br>
+	<p>Step 4: use random number again to get 3 Interference options </p>
+
+	<br>
+
+	<p>Step5: put the 6 number in an array</p>
+
+	<br>
+
+	<p>Step6: output the options in Array[random number 0~5]</p>
+
+	<br>
+	<p>Step7: let the user enter his choise. if he choose 5th, when the value  return to the program, the program will change the number to the array by Array[5-1]</p>
+
+	<br>
+	<p>Step8: get three values of the number which the options that user chose represent and add them together </p>
+
+	<br>
+	<p>Step9: compare the number in step8 and the total number in step1</p>
+
+	<br>
+	<p>Step 10 : use "if else loop "to tell the user result</p>
+</center>
+
+	
+	<script src="changepic.js"></script>
+</body>
+</html>
