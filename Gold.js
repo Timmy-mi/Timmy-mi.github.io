@@ -2,7 +2,7 @@ function acd(){
 	alert('bruh why do you have to do this man');
 }
 function today(){
-	return document.getElementById('now').innerHTML = Date();
+	return document.getElementById('now').innerHTML = new Date().getFullYear();
 }
 function papa(){
 	return document.getElementById('im').src = 'https://images.gnwcdn.com/2020/articles/2020-07-19-11-39/minecraft-fans-find-seed-for-title-screen-background-panorama-1595155174941.jpg/EG11/resize/1200x-1/minecraft-fans-find-seed-for-title-screen-background-panorama-1595155174941.jpg';
